@@ -23,7 +23,7 @@ print(f"--- Debug: Dimensiones de X_test: {X_test.shape} ---")  # Debería ser (
 
 # --- Cargar modelo previamente entrenado ---
 model_filename = "model.pkl"
-model_path = os.path.abspath(os.path.join(os.getcwd() + "/mlruns/", model_filename))
+model_path = os.path.abspath(os.path.join(os.getcwd(), model_filename))
 print(f"--- Debug: Intentando cargar modelo desde: {model_path} ---")
 
 try:
