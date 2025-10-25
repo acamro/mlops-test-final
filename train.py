@@ -1,5 +1,6 @@
 import os
 import mlflow
+import pickle
 import mlflow.sklearn
 from sklearn.datasets import load_diabetes
 from sklearn.linear_model import LinearRegression
@@ -102,6 +103,10 @@ try:
             artifact_path="model"
         )
         print(f"✅ Modelo registrado correctamente. MSE: {mse:.4f}")
+
+        print("Guardando el modelo")
+        with open("mlruns/modelo.pkl", "wb") as f:
+            pickle.dump(model, f)
 
 except Exception as e:
     print(f"\n--- ERROR durante la ejecución de MLflow ---")
