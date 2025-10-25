@@ -105,7 +105,7 @@ try:
         print(f"✅ Modelo registrado correctamente. MSE: {mse:.4f}")
 
         print("Guardando el modelo")
-        with open("mlruns/modelo.pkl", "wb") as f:
+        with open("modelo.pkl", "wb") as f:
             pickle.dump(model, f)
 
 except Exception as e:
