@@ -99,7 +99,7 @@ try:
 
         mlflow.sklearn.log_model(
             sk_model=model,
-            name="model"
+            artifact_path="model"
         )
         print(f"✅ Modelo registrado correctamente. MSE: {mse:.4f}")
 
