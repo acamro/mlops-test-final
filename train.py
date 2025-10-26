@@ -104,9 +104,9 @@ try:
         )
         print(f"✅ Modelo registrado correctamente. MSE: {mse:.4f}")
 
-        print("Guardando el modelo")
-        with open("modelo.pkl", "wb") as f:
-            pickle.dump(model, f)
+    print("Guardando el modelo")
+    with open("model.pkl", "wb") as f:
+        pickle.dump(model, f)
 
 except Exception as e:
     print(f"\n--- ERROR durante la ejecución de MLflow ---")
